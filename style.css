@@ -1,0 +1,205 @@
+/* Coded By Abdelrahman Elrefai Tawfik */
+/* 11th Challenge on Front End Mentor */
+
+/* Colors */
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* General Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .2s;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url(font/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(font/Montserrat-VariableFont_wght.ttf);
+}
+
+/* body styling */
+body {
+    height: 100vh;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*  Product Styling */
+.product {
+    width: 350px;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+
+/* Head Images */
+.desktop-img {
+    display: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.mobile-img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.mobile-img:hover {
+    filter: saturate(400%);
+}
+
+/* Product content */
+.product-cont {
+    padding: 25px;
+}
+
+/* pre head caption*/
+.pre-head {
+    display: block;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+
+}
+
+/* heading */
+
+h1 {
+    font-size: 35px;
+    line-height: 30px;
+    font-family: Fraunces, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+h1:hover {
+    color: var(--dark-cyan);
+    filter: saturate(400%);
+}
+
+.head p {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.4;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+.head p:hover {
+    color: var(--very-dark-blue);
+    filter: saturate(400%);
+
+}
+
+
+/* prices styling */
+.prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-price {
+    font-size: 35px;
+    font-family: Fraunces, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: var(--dark-cyan);
+    margin-right: 15px;
+
+}
+
+.current-price:hover {
+    filter: saturate(400%)
+}
+
+.old-price {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+/* button styling */
+.cart-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border: 2px solid var(--dark-cyan);
+    border-radius: 10px;
+    background-color: var(--dark-cyan);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--White);
+    text-align: center;
+}
+
+.cart-button:hover {
+    filter: saturate(400%)
+}
+
+/* responsive media */
+@media screen and (min-width:1440px) {
+
+    /* product container */
+    .product {
+        width: 650px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    /* images */
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+    .desktop-img:hover {
+        filter: saturate(400%);
+    }
+
+    /* content */
+    .product-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .head h1 {
+        font-size: 40px;
+        line-height: .9;
+    }
+
+    .pre-head {
+        margin: 10px 0 20px 0;
+    }
+
+    .head p {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
